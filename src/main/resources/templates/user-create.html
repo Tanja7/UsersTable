@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+</head>
+<body>
+<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+    <label for="firstName">Имя</label>
+    <input type="text" th:field="*{firstName}" id="firstName" placeholder="Имя">
+    <label for="lastName">Фамилия</label>
+    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Фамилия">
+    <label for="sex">Пол</label>
+    <input type="text" th:field="*{sex}" id="sex" placeholder="Пол">
+    <!--<select  id="sex" placeholder="Sex">
+           <option selected disabled>Пол</option>
+        <option value="man">Мужской</option>
+        <option value="woman">Женский</option>
+    </select>-->
+    <label for="age">Возраст</label>
+    <input type="number" th:field="*{age}" id="age" placeholder="Возраст">
+    <input type="submit" value="Добавить пользователя">
+</form>
+</body>
+</html>
